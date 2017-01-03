@@ -1,0 +1,76 @@
+<!--盒子开始 医师介绍-->
+<div class="hezi">
+    <div class="doc_l">
+        <a href="<{$doctor_pic}>" rel="lightbox[portfolio]">  <img src="<{$doctor_pic}>" alt="Image 07" class="imgage-with-frame" /></a>
+        <h5><{$doctor_name}></h5>
+    </div>
+    <div class="doc_r">
+        <p> 许建英，医学博士 教授，博士生导师，享受政府特殊津贴。现任山西医学科学院，山西大医院呼吸科主任。名医等荣誉称号。</p>
+        <p style="font-weight:bold;"><{$dtype_name}></p>
+        <p><{$doctor_detail}></p>
+        <p>执医年限：<span><{$doctor_year}></span>年</p>
+    </div>
+    <!--右侧预约总量开始-->
+     <div class="doc_n">
+            <div class="ghnum_t">
+                <p class="gh_t"><{$doc_num}></p>
+                <p class="gh_f">预约总量</p>
+            </div>
+            <div class="ghnum_t"  style="border-left:1px solid #dddddd;">
+                <p class="gh_t">222</p>
+                <p class="gh_f">剩余总量</p>
+            </div>
+            <div class="ghnum_d">
+                <img src="__PUBLIC__/Images/yiyuan_logo.png" style="float:left;margin-top:25px;">
+            <p style="float:left;width:60px;margin:25px -10px;"><b>执业点</b></p>
+            <p style="width:210px;margin-top:-20px;">山西省人民医院（<{$small_name}>）</p>
+            </div>
+     </div>
+      <!--右侧预约总量结束-->
+</div>
+<!--盒子结束-->
+<!--提示开始-->
+<div class="xinxi">
+    <p class="tishi">温馨提示：</p>
+    <p class="ts_n">可预约7日内号源，每日07:00放号，每日17:0.
+0截止当日预约，最迟就诊当日17:00预约取消。需提前30分钟取号。建议您提前50分钟到医院，携带您的有效身份证件办理诊疗卡取号。</p>
+    <button class="tishi2">预约须知</button>
+</div>
+<!--提示结束-->
+<!--挂号开始-->
+<table border="1px" cellspacing="0" bordercolor="#50bde8">
+    <tr>
+        <td colspan="16" height="50px" style="font-size:24px;color:black;padding-left:10px;">预约挂号</td>
+    </tr>
+
+    <tr>
+        <td colspan="16" height="50px">
+        <img src="__PUBLIC__/Images/yiyuan_logo.png" style="float:left;margin-top:15px;">
+            <p>执业点</p>
+            <div class="zhiyd">山西省人民医院（<{$small_name}>）</div>
+        </td>
+    </tr>
+
+    <tr height="60px" class="riqi">
+        <td></td>
+    <foreach name="arr_cal" key="k" item="v">
+        <td><{$k}><br><{$v}></td>
+    </foreach>
+    </tr>
+
+    <tr height="50px" class="riqi">
+        <td>挂号</td>
+        <foreach name="arr_week" key="mk" item="week">
+            <foreach name="week" key="wk" item="ww">
+                <foreach name="ww" item="w">
+                    <if condition="$w eq '预约'">
+                        <td><a href="__APP__/ Patient?doctor_id=<{$doctor_id}>&mk=<{$mk}>&wk=<{$wk}>"><{$w}></a></td>
+                    <else />
+                        <td><{$w}></td>
+                    </if>     
+                </foreach>
+            </foreach>
+        </foreach>
+    </tr>
+</table>
+<!--挂号结束-->

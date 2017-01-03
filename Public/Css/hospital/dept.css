@@ -1,0 +1,24 @@
+.keshi{
+	width:900px;
+	margin-top:-40px;}
+
+.keshi .t1{
+	width:900px;
+	text-align:center;
+	margin:30px auto;
+	border:1px solid #9b9863;}
+	
+.keshi .t1 th{
+	height:40px;
+	font-size:20px;
+	background-color:#e7e1d1;}
+	
+.keshi .t1 td{
+	height:30px;
+	font-size:16px;}
+.keshi .t1 td a:link{
+	color:black;}
+.keshi .t1 td a:visited{
+	color:black;}
+.keshi .t1 td a:hover{text-decoration:none;
+		color:#ff6600;}

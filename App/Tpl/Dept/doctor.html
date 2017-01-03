@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>科室医生</title>
+<block name="css">
+    <link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/Css/hospital/doctor.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/Css/hospital/dept_detail.css"/>
+</block>
+<body>
+    <!-- 模板继承 -->
+    <extend name="Public:base"/>
+    <block name="base2">
+    	<div id="templatemo_main_wrapper">
+    <div id="templatemo_main">
+        <div class="dept_wrap">
+            <div class="dept_left">
+                <img src="__PUBLIC__/Images/yike.png">
+                <button class="btn1"></button>
+                  <button class="btn2"></button>
+            </div>
+            <div class="dept_right">
+            <foreach name="arr_doc" item="v">
+               <div class="gallery_box">
+                    <div class="doc_l">
+                        <a href="<{$v['doctor_pic']}>" rel="lightbox[portfolio]">  <img src="<{$v['doctor_pic']}>" alt="Image 07" class="imgage-with-frame" /></a>
+                        <h5><{$v['doctor_name']}></h5>
+                    </div>
+                    <div class="doc_r">
+                        <p> 许建英，医学博士 教授，博士生导师，享受政府特殊津贴。现任山西医学科学院，山西大医院呼吸科主任。中华医学会内科学分会全国委员，山西省呼吸病专业委员会主任委员，省呼吸医师分会副会长，省应急管理专家，“卫生部抗生素临床合理应用全国普及计划”专家，中华结核和呼吸杂志通讯编委、国际呼吸等杂志的编委。荣获山西省“五一”劳动奖章、省卫生系统有突出贡献人才、第二届中国呼吸医师提名奖、巾帼建功标兵及山西名医等荣誉称号。</p>
+                         <button class="gua" id="<{$v['doctor_id']}>">预约挂号</button>
+                    </div>
+                </div>
+             </foreach>  
+        
+        <div class="cleaner"></div>
+        <div class="pagging" align="center">
+            <{$page}>
+        </div>   
+        <div class="cleaner"></div>
+                
+        <div class="cleaner"></div>
+
+    </div> <!-- END of templatemo_main_wrapper -->
+</div> <!-- END of templatemo_main -->
+
+                
+            </div>     
+        </div>  
+       
+    </div> <!-- END of templatemo_main_wrapper -->
+</div> <!-- END of templatemo_main -->
+</block>
+<block name="js">
+<script type="text/javascript" src="__PUBLIC__/Js/hospital/jquery-1.3.2.min.js"></script>
+<script>
+window.onload=function(){
+    document.getElementsByClassName("btn1")[0].onclick=function(){
+        window.location= "__URL__/dept_detail?dp_name=<{$dp_name}>";
+        };
+    document.getElementsByClassName("btn2")[0].onclick=function(){
+        window.location="__URL__/doctor?dp_name=<{$dp_name}>";
+        };
+}
+
+$(".gua").click( function () { 
+    id = this.id;
+    window.location = "__APP__/Appoint?doctor_id="+id;
+});
+</script>
+</block>
+</body>

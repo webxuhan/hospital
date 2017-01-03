@@ -1,0 +1,41 @@
+.dept_wrap{
+	width:1260px;
+	height:600px;
+	/*border:1px solid red;*/
+	margin:-20px -150px;
+}
+	
+.dept_left{
+	border:1px solid #d8e1ce;
+	float:left;
+	width:233px;
+	height:125px;
+	background:#f1f8f0;
+}
+	
+.btn1{
+	width:204px;
+	height:30px;
+	background:url(../../Images/btn1.png);
+	border:0;
+	cursor:pointer;
+	margin:10px 13px;}
+	
+.btn2{
+	width:204px;
+	height:30px;
+	background:url(../../Images/btn2.png);
+	border:0;
+	cursor:pointer;
+	margin:-5px 12px;}
+	
+.dept_right{
+	width:1000px;
+	border:1px solid #d8e1ce;
+	float:left;
+	margin-left:10px;}
+	
+.dept_right p{
+	font-size:15px;
+	padding:8px 10px;
+	color:black;}

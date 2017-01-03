@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>医院科室</title>
+<block name="css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/hospital/dept.css"/>
+</block>
+<body>
+    <!-- 模板继承 -->
+    <extend name="Public:base"/>
+    <block name="base2">
+    	<div id="templatemo_main_wrapper">
+    		<div id="templatemo_main">
+		        <div class="keshi">
+			        <foreach name="dept" key="k" item="v">
+			        	<table class="t1" cellspacing="0">
+			            	<tr>
+			                	<th colspan="4"><{$k}></th>
+			                </tr>
+			                <tr>
+				                <for start="1" end="count($v)">
+				                <td><a href="__APP__/Dept/dept_detail/dp_name/<{$v[$i-1]}>"><{$v[$i-1]}></a></td>
+					            	<if condition="$i%4 eq 0"> 
+					                	</tr>	 	
+					                </if> 
+				                </for>
+			            </table>
+			        </foreach>  
+		        </div>
+   			</div> <!-- END of templatemo_main_wrapper -->
+		</div> <!-- END of templatemo_main -->
+    </block>
+</body>

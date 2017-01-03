@@ -1,0 +1,56 @@
+.dept_wrap{
+	width:1260px;
+	height:600px;
+	margin:-20px -150px;
+}
+	
+.dept_left{
+	border:1px solid #d8e1ce;
+	float:left;
+	width:233px;
+	height:125px;
+	background:#f1f8f0;
+}
+	
+.btn1{
+	width:204px;
+	height:30px;
+	background:url(../images/btn1.png);
+	border:0;
+	cursor:pointer;
+	margin:10px 13px;}
+	
+.btn2{
+	width:204px;
+	height:30px;
+	background:url(../images/btn2.png);
+	border:0;
+	cursor:pointer;
+	margin:-5px 12px;}
+	
+.dept_right{
+	width:1000px;
+	border:1px solid #d8e1ce;
+	float:left;
+	margin-left:10px;}
+	
+.doc_l{
+	width:180px;
+	height:280px;
+	float:left;}
+	
+.doc_r{
+	width:750px;
+	height:280px;
+	float:left;
+	margin-left:20px;}
+
+.gua{
+	float:right;
+	margin-top:125px;;
+	width:150px;
+	background:#bb3a33;
+	color:white;
+	height:25px;
+	border:0;
+	cursor:pointer;}

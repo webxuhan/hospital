@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>科室医生</title>
+<block name="css">
+    <link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/Css/hospital/yuyue.css"/>
+</block>
+<body>
+    <!-- 模板继承 -->
+    <extend name="Public:base"/>
+    <block name="base2">
+    	<div id="templatemo_main_wrapper">
+    <div id="templatemo_main">
+
+        <div class="yuyue">
+            <if condition="isset($value)">
+            <!--搜索选择框开始-->
+            <div class="soso">
+                <form action="#" method="post">
+                   <input type="text" value="<{$value}>" class="xuan" disabled="disabled"> 
+                    <select class="xuan1" id="k1" name="keshi">
+                        <option>-----------请选择科室-----------</option>
+                        <foreach name="dept_arr" item="dept">
+                            <option value="<{$dept.small_id}>"><{$dept.small_name}></option>
+                        </foreach>
+                    </select>
+                    <select class="xuan2" id="k2" name="yisheng" disabled="disabled">
+                        <option>-----------请选择医生-----------</option>
+                        
+                    </select>
+                    <input type="button" value="确认" class="xuan3">
+                </form>
+            </div>
+            <!--搜索选择框结束-->
+            </if>
+            <div class="xinxi">
+        <p class="tishi">温馨提示：</p>
+        <p class="ts_n">可预约7日内号源，每日07:00放号，每日17:0.
+    0截止当日预约，最迟就诊当日17:00预约取消。需提前30分钟取号。建议您提前50分钟到医院，携带您的有效身份证件办理诊疗卡取号。</p>
+        <button class="tishi2">预约须知</button>
+    </div>
+    
+        </div>
+          
+       
+    </div> <!-- END of templatemo_main_wrapper -->
+</div> <!-- END of templatemo_main -->
+</block>
+<block name="js">
+    <!-- <script src="__PUBLIC__/Js/jquery-1.9.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="__PUBLIC__/Js/deptdoc/ajax.js"></script> -->
+    <!-- <script type="text/javascript" src="__PUBLIC__/Js/deptdoc/soso.js"></script> -->
+    <script>
+        $(function(){
+            //给选择科室监听事件
+            $('#k1').change(function(){
+               $("#k2").children(":not(:first)").remove();
+               if($(this).val() == "-----------请选择科室-----------"){  
+                    $("#k2").attr("disabled",true);
+               }else{
+                    $("#k2").attr("disabled",false);
+                    $.ajax({
+                    url: '<{:U("Appoint/depttype")}>',
+                    method:'post',
+                    data:'kid='+$(this).val(),  
+                    dataType: "json",
+                    success: function(rs){ 
+                        console.log("r1",rs);
+                       if(rs!=null){
+                         rs.forEach(function(item){
+                            var doctorOption = "<option value='"+item.doctor_id+"'>"+item.doctor_name+"</option>";
+                            $("#k2").append(doctorOption);
+                        });
+                       }
+                    }
+                })     
+               }
+            });
+            //点击提交挂号信息
+           
+            $(".xuan3").off("click");
+            $(".xuan3").on("click",function(){
+                 if($("#k1").val()!="-----------请选择科室-----------" && $("#k2").val()!="-----------请选择医生-----------"){
+                    $.ajax({
+                        url:'<{:U("Appoint/index")}>',
+                        dataType:"html",
+                        method:"post",
+                        data:'dept_id='+$("#k1").val()+'&doctor_id='+$("#k2").val(),
+                        success: function(rs){
+                           $(".yuyue").append(rs);
+                       }
+                    });
+                    
+                 }else{
+                    //确认之前验证
+                    alert("请选择科室和医生！");
+                 }
+            });
+        });
+        
+    </script>
+</block>
+</body>
+

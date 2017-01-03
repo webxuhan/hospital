@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>科室详情</title>
+<block name="css">
+<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/Css/hospital/dept_detail.css"/>
+</block>
+<body>
+    <!-- 模板继承 -->
+    <extend name="Public:base"/>
+    <block name="base2">
+    	<div id="templatemo_main_wrapper">
+    <div id="templatemo_main">
+    	<div class="dept_wrap">
+            <div class="dept_left">
+            	<img src="__PUBLIC__/Images/yike.png">
+                <button class="btn1"></button>
+                  <button class="btn2"></button>
+            </div>
+            <div class="dept_right">
+                <p style="font-size:30px;color:#1b453b;margin-top:30px;">科室介绍</p>
+                <p><{$pt_detail[0]['dept_detail']}></p>
+                 
+            </div>     
+    	</div> 	
+       
+    </div> <!-- END of templatemo_main_wrapper -->
+</div> <!-- END of templatemo_main -->
+</block>
+<block name="js">
+<script>
+window.onload=function(){
+	document.getElementsByClassName("btn1")[0].onclick=function(){
+		window.location= "__URL__/dept_detail?dp_name=<{$pt_detail[0]['small_name']}>";
+		};
+	document.getElementsByClassName("btn2")[0].onclick=function(){
+		window.location="__URL__/doctor?dp_name=<{$pt_detail[0]['small_name']}>";
+		};
+}
+</script>
+</block>
+</body>

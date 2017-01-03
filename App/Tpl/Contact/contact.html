@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>医院科室</title>
+<block name="css">
+</block>
+<body>
+    <!-- 模板继承 -->
+    <extend name="Public:base"/>
+    <block name="base2">
+    	<div id="templatemo_main_wrapper">
+    <div id="templatemo_main">
+    	
+        <h2>信息采集</h2>
+        <div class="half float_l">
+			<h4>请及时给我们提一些意见</h4>
+            <p>您宝贵的意见将是我们前进的动力.</p>
+            <div id="contact_form">
+				<form method="post" name="contact" action="__APP__/Contact/check">
+					
+					<label for="author">姓名:</label> <input type="text" id="author" name="infor_name" class="required input_field" required/>
+					<div class="cleaner h10"></div>
+													
+					<label for="email">Email:</label> <input type="email" class="validate-email required input_field" name="email" id="email" />
+
+					<div class="cleaner h10"></div>
+											
+					<label for="subject">科室:</label> <input type="text" class="validate-subject required input_field" name="dept_name" id="subject" required/>				               
+					<div class="cleaner h10"></div>
+							
+					<label for="text">建议:</label> <textarea id="text" name="information" rows="0" cols="0" class="required" required></textarea>
+					<div class="cleaner h10"></div>				
+												
+					<input type="submit" value="发送" id="submit" class="submit_btn float_l" />
+					<input type="reset" value="重置" id="reset" name="reset" class="submit_btn float_r" />
+
+				</form>
+            </div>
+		</div>
+        <div class="half float_r">
+			<h4>我们的地址</h4>
+            <img src="images/address.png" style="border:1px solid #CCC;width:350px;height:350px;">
+            <div class="cleaner h40"></div>
+            <h6><strong>医院名称</strong></h6>
+
+				山西省人民医院<br /><br />
+                
+            <strong>电话:</strong> 082-447-0850<br />
+			<strong>Email:</strong> <a href="mailto:info@yoursite.com">1027329762@qq.com</a>
+        </div>
+        
+        <div class="cleaner h40"></div>
+        
+    </div> <!-- END of templatemo_main_wrapper -->
+</div> <!-- END of templatemo_main -->
+    </block>
+</body>

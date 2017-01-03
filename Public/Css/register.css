@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+body{
+	background:url(../images/login_bgx.gif);
+}
+
+#top{
+	margin-top:70px;
+	text-align:center;
+}
+
+#wrap{
+	text-align:center;
+	margin-top:10px;
+}
+#register{
+	margin:0 auto;
+	width:400px;
+	height:380px;
+	text-align:center;
+	border:1px solid #dedede;
+	margin-top:10px;
+	background:#f7f7f7;
+	border-radius:5px;
+}
+
+input{
+	width:300px;
+	height:40px;
+	margin-top:20px;
+	background:#f7f7f7;
+	border:1px solid #cad2db;
+	border-radius:5px;
+	color:#717171;
+}
+
+#yanzhen{
+	float:left;
+	margin-left:48px;
+}
+
+#sysck{
+	float:right;
+	margin:-38px 60px;
+}
+
+#sbmit{
+	width:300px;
+	height:35px;
+	clear:both;
+	margin-top:20px;
+	background:#65abed;
+	border:0;
+	color:white;
+}
+a{text-decoration:none;color:#8c8e91;font-size:15px;}
+a:hover{text-decoration:none;color:#65abed;}
