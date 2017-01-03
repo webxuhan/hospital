@@ -47,12 +47,46 @@ ddsmoothmenu.init({
             durationCarousel: 1000,
             durationDetails: 600
         });
-        $(".ddsmoothmenu>ul>li>a").on("click",function(){
-           $(".ddsmoothmenu>ul>li>a").removeClass("selected");
-           $(this).addClass("selected");
-        })
+         // console.log(getCookie('nav'));
+         var cookies = getCookie('nav');
+         console.log(cookies);
+         $(".ddsmoothmenu>ul>li>a").removeClass("selected");
+         switch(cookies){
+            case 'Index':
+                $(".ddsmoothmenu>ul>li").eq(1).children("a").addClass("selected");
+                break;
+            case 'Dept':
+                $(".ddsmoothmenu>ul>li").eq(2).children("a").addClass("selected")
+                break;
+            case 'Appoint':
+                $(".ddsmoothmenu>ul>li").eq(3).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
+                break;
+            case 'Register':
+                $(".ddsmoothmenu>ul>li").eq(6).children("a").addClass("selected")
+                break;
+        }
     });
      
+    function getCookie(sName){
+        // cookies are separated by semicolons
+        var aCookie = document.cookie.split("; ");
+        //alert(document.cookie);
+        for (var i=0; i < aCookie.length; i++)
+        {
+            // a name/value pair (a crumb) is separated by an equal sign
+            var aCrumb = aCookie[i].split("=");
+            if (sName == aCrumb[0])
+            return unescape(aCrumb[1]);
+        } // a cookie with the requested name does not exist
+        return "";
+    }
+
 </script>
 
 </head>
@@ -64,7 +98,7 @@ ddsmoothmenu.init({
         <div id="templatemo_menu" class="ddsmoothmenu">
            <ul>
            		<li style="margin-top:10px;margin-right:20px;" id="yonghu">您好&nbsp;<?php echo ($_COOKIE['username']); ?></li>
-                <li><a href="__APP__/Index" class="selected">主页1</a></li>
+                <li><a href="__APP__/Index" class="selected">主页 </a></li>
                 <li><a href="__APP__/Dept/index">科室</a></li>
                 <li><a href="#">预约挂号</a>
                 	 <ul>

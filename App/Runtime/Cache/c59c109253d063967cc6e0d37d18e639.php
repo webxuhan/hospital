@@ -47,12 +47,43 @@ ddsmoothmenu.init({
             durationCarousel: 1000,
             durationDetails: 600
         });
-        $(".ddsmoothmenu>ul>li>a").on("click",function(){
-           $(".ddsmoothmenu>ul>li>a").removeClass("selected");
-           $(this).addClass("selected");
-        })
+         // console.log(getCookie('nav'));
+         var cookies = getCookie('nav');
+         console.log(cookies);
+         $(".ddsmoothmenu>ul>li>a").removeClass("selected");
+         switch(cookies){
+            case 'Index':
+                $(".ddsmoothmenu>ul>li").eq(1).children("a").addClass("selected");
+                break;
+            case 'Dept':
+                $(".ddsmoothmenu>ul>li").eq(2).children("a").addClass("selected")
+                break;
+            case 'Appoint':
+                $(".ddsmoothmenu>ul>li").eq(3).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
+                break;
+        }
     });
      
+    function getCookie(sName){
+        // cookies are separated by semicolons
+        var aCookie = document.cookie.split("; ");
+        //alert(document.cookie);
+        for (var i=0; i < aCookie.length; i++)
+        {
+            // a name/value pair (a crumb) is separated by an equal sign
+            var aCrumb = aCookie[i].split("=");
+            if (sName == aCrumb[0])
+            return unescape(aCrumb[1]);
+        } // a cookie with the requested name does not exist
+        return "";
+    }
+
 </script>
 
 
@@ -65,7 +96,7 @@ ddsmoothmenu.init({
         <div id="templatemo_menu" class="ddsmoothmenu">
            <ul>
            		<li style="margin-top:10px;margin-right:20px;" id="yonghu">您好&nbsp;<?php echo ($_COOKIE['username']); ?></li>
-                <li><a href="__APP__/Index" class="selected">主页1</a></li>
+                <li><a href="__APP__/Index" class="selected">主页 </a></li>
                 <li><a href="__APP__/Dept/index">科室</a></li>
                 <li><a href="#">预约挂号</a>
                 	 <ul>
@@ -124,7 +155,7 @@ ddsmoothmenu.init({
 		</div>
         <div class="half float_r">
 			<h4>我们的地址</h4>
-            <img src="images/address.png" style="border:1px solid #CCC;width:350px;height:350px;">
+            <img src="" style="border:1px solid #CCC;width:350px;height:350px;">
             <div class="cleaner h40"></div>
             <h6><strong>医院名称</strong></h6>
 

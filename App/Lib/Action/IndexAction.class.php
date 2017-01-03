@@ -2,6 +2,11 @@
 header("content-type:text/html;charset=utf8");
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {
+    public function __construct(){
+        parent::__construct();
+        cookie('nav',MODULE_NAME,time()+24*3600);
+    }
+    
     public function index(){
     	$username = cookie('username');
     	$this->assign('username',$username);

@@ -1,7 +1,10 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
 class PatientAction extends Action {
-
+     public function __construct(){
+        parent::__construct();
+        cookie('nav',MODULE_NAME,time()+24*3600);
+    }
     public function index(){
         $doc = M('doctor');
         $map['doctor_id'] = $_GET['doctor_id'];

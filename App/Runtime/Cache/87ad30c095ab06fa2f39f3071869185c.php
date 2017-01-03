@@ -47,12 +47,30 @@ ddsmoothmenu.init({
             durationCarousel: 1000,
             durationDetails: 600
         });
-        console.log(getCookie('nav'));
-
-        $(".ddsmoothmenu>ul>li>a").on("click",function(){
-           $(".ddsmoothmenu>ul>li>a").removeClass("selected");
-           $(this).addClass("selected");
-        })
+         // console.log(getCookie('nav'));
+         var cookies = getCookie('nav');
+         console.log(cookies);
+         $(".ddsmoothmenu>ul>li>a").removeClass("selected");
+         switch(cookies){
+            case 'Index':
+                $(".ddsmoothmenu>ul>li").eq(1).children("a").addClass("selected");
+                break;
+            case 'Dept':
+                $(".ddsmoothmenu>ul>li").eq(2).children("a").addClass("selected")
+                break;
+            case 'Appoint':
+                $(".ddsmoothmenu>ul>li").eq(3).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
+                break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
+                break;
+            case 'Register':
+                $(".ddsmoothmenu>ul>li").eq(6).children("a").addClass("selected")
+                break;
+        }
     });
      
     function getCookie(sName){
@@ -82,7 +100,7 @@ ddsmoothmenu.init({
         <div id="templatemo_menu" class="ddsmoothmenu">
            <ul>
            		<li style="margin-top:10px;margin-right:20px;" id="yonghu">您好&nbsp;<?php echo ($_COOKIE['username']); ?></li>
-                <li><a href="__APP__/Index" class="selected">主页1</a></li>
+                <li><a href="__APP__/Index" class="selected">主页 </a></li>
                 <li><a href="__APP__/Dept/index">科室</a></li>
                 <li><a href="#">预约挂号</a>
                 	 <ul>
@@ -118,7 +136,7 @@ ddsmoothmenu.init({
 			                	<th colspan="4"><?php echo ($k); ?></th>
 			                </tr>
 			                <tr>
-				                <?php $__FOR_START_13179__=1;$__FOR_END_13179__=count($v);for($i=$__FOR_START_13179__;$i < $__FOR_END_13179__;$i+=1){ ?><td><a href="__APP__/Dept/dept_detail/dp_name/<?php echo ($v[$i-1]); ?>"><?php echo ($v[$i-1]); ?></a></td>
+				                <?php $__FOR_START_11163__=1;$__FOR_END_11163__=count($v);for($i=$__FOR_START_11163__;$i < $__FOR_END_11163__;$i+=1){ ?><td><a href="__APP__/Dept/dept_detail/dp_name/<?php echo ($v[$i-1]); ?>"><?php echo ($v[$i-1]); ?></a></td>
 					            	<?php if($i%4 == 0): ?></tr><?php endif; } ?>
 			            </table><?php endforeach; endif; ?>  
 		        </div>

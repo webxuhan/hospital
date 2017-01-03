@@ -47,12 +47,27 @@ ddsmoothmenu.init({
             durationCarousel: 1000,
             durationDetails: 600
         });
-        console.log(getCookie('nav'));
-
-        $(".ddsmoothmenu>ul>li>a").on("click",function(){
-           $(".ddsmoothmenu>ul>li>a").removeClass("selected");
-           $(this).addClass("selected");
-        })
+         // console.log(getCookie('nav'));
+         var cookies = getCookie('nav');
+         console.log(cookies);
+         $(".ddsmoothmenu>ul>li>a").removeClass("selected");
+         switch(cookies){
+            case 'Index':
+                $(".ddsmoothmenu>ul>li").eq(1).children("a").addClass("selected");
+                break;
+            case 'Dept':
+                $(".ddsmoothmenu>ul>li").eq(2).children("a").addClass("selected")
+                break;
+            case 'Appoint':
+                $(".ddsmoothmenu>ul>li").eq(3).children("a").addClass("selected")
+                break;
+        }
+    $(".ddsmoothmenu>ul>li>a").on("click",function(){
+        // alert(cookies);
+        console.log(cookies);
+        $(".ddsmoothmenu>ul>li>a").removeClass("selected");
+    
+    })
     });
      
     function getCookie(sName){
@@ -82,7 +97,7 @@ ddsmoothmenu.init({
         <div id="templatemo_menu" class="ddsmoothmenu">
            <ul>
            		<li style="margin-top:10px;margin-right:20px;" id="yonghu">您好&nbsp;<?php echo ($_COOKIE['username']); ?></li>
-                <li><a href="__APP__/Index" class="selected">主页1</a></li>
+                <li><a href="__APP__/Index" class="selected">主页 </a></li>
                 <li><a href="__APP__/Dept/index">科室</a></li>
                 <li><a href="#">预约挂号</a>
                 	 <ul>

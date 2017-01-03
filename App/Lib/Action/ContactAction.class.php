@@ -2,6 +2,10 @@
 header("content-type:text/html;charset=utf8");
 // 本类由系统自动生成，仅供测试用途
 class ContactAction extends Action {
+    public function __construct(){
+        parent::__construct();
+        cookie('nav',MODULE_NAME,time()+24*3600);
+    }
     public function index(){
     	
     	$this->display('contact');
