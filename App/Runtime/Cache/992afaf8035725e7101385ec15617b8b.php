@@ -61,13 +61,16 @@ ddsmoothmenu.init({
             case 'Appoint':
                 $(".ddsmoothmenu>ul>li").eq(3).children("a").addClass("selected")
                 break;
+            case 'Contact':
+                $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
+                break;
+            case 'Login':
+                $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
+                break;
+            case 'Register':
+                $(".ddsmoothmenu>ul>li").eq(6).children("a").addClass("selected")
+                break;
         }
-    $(".ddsmoothmenu>ul>li>a").on("click",function(){
-        // alert(cookies);
-        console.log(cookies);
-        $(".ddsmoothmenu>ul>li>a").removeClass("selected");
-    
-    })
     });
      
     function getCookie(sName){

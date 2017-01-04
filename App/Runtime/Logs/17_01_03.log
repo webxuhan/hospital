@@ -10523,3 +10523,542 @@ INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.001701s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001862s ]
 
+[ 2017-01-03T18:31:30+08:00 ] 127.0.0.1 /hospital/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001262s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001422s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: select d.doctor_name,d.doctor_pic,d.doctor_detail,t.dtype_name,s.small_name
+		from doctor d,dept_small s,doct_type t 
+		where d.dtype_id=t.dtype_id and d.small_id=s.small_id
+		order by t.dtype_id desc
+		limit 4 [ RunTime:0.000971s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 100 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023232s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001157s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000964s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000777s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000968s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004231s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001499s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001656s ]
+
+[ 2017-01-03T18:31:46+08:00 ] 127.0.0.1 /hospital/Dept/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000648s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `dept_big` [ RunTime:0.009559s ]
+SQL: SELECT `big_name` FROM `dept_big`  [ RunTime:0.000513s ]
+SQL: select b.big_name,s.small_name from dept_big b,dept_small s 
+            where b.big_id=s.big_id [ RunTime:0.000859s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\87ad30c095ab06fa2f39f3071869185c.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024051s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000895s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000751s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000565s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003616s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001925s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002135s ]
+
+[ 2017-01-03T18:31:51+08:00 ] 127.0.0.1 /hospital/Appoint?num=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000945s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001112s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 41 行.
+NOTIC: [8] Undefined variable: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 46 行.
+SQL: SHOW COLUMNS FROM `workdays` [ RunTime:0.012581s ]
+SQL: SELECT `work_one`,`work_two`,`work_three` FROM `workdays` WHERE ( `doctor_id` = null )  [ RunTime:0.000816s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+SQL: SHOW COLUMNS FROM `dept_small` [ RunTime:0.009434s ]
+SQL: SELECT `small_id`,`small_name` FROM `dept_small`  [ RunTime:0.000883s ]
+NOTIC: [8] Undefined index: kid D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `doctor` [ RunTime:0.009917s ]
+SQL: SELECT `doctor_id`,`doctor_name` FROM `doctor` WHERE ( `small_id` = null ) AND ( `dtype_id` = 1 )  [ RunTime:0.000547s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\992afaf8035725e7101385ec15617b8b.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047483s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001043s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000854s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000650s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000972s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003852s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001672s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001813s ]
+
+[ 2017-01-03T18:31:53+08:00 ] 127.0.0.1 /hospital/Contact/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000702s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\c59c109253d063967cc6e0d37d18e639.php 第 101 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009706s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000396s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000342s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000244s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001482s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000460s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-01-03T18:31:57+08:00 ] 127.0.0.1 /hospital/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000849s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006454s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000471s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000389s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000298s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001702s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000506s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-01-03T18:31:57+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000917s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001062s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:31:58+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.theme.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001402s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:33:34+08:00 ] 127.0.0.1 /hospital/Contact/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000848s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\c59c109253d063967cc6e0d37d18e639.php 第 101 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010390s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000516s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000468s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000446s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002435s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000928s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2017-01-03T18:33:38+08:00 ] 127.0.0.1 /hospital/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000927s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007112s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000349s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000314s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000241s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001409s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000463s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-01-03T18:33:38+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000803s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:33:39+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.theme.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001217s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001463s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:34:28+08:00 ] 127.0.0.1 /hospital/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001190s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001343s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006017s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000405s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000399s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000303s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001662s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000516s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2017-01-03T18:34:29+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000632s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:34:30+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.theme.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001789s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002044s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001444s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:34:46+08:00 ] 127.0.0.1 /hospital/Login/checklogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000639s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.009027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( `user_name` = 'wuxin123' ) AND ( `user_pwd` = '06fc44dee5528191037d3ec231e67eb0' ) LIMIT 1   [ RunTime:0.000798s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012211s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001061s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001179s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000884s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004499s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000990s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2017-01-03T18:34:48+08:00 ] 127.0.0.1 /hospital/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000838s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: select d.doctor_name,d.doctor_pic,d.doctor_detail,t.dtype_name,s.small_name
+		from doctor d,dept_small s,doct_type t 
+		where d.dtype_id=t.dtype_id and d.small_id=s.small_id
+		order by t.dtype_id desc
+		limit 4 [ RunTime:0.000956s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022672s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001278s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001267s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000896s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004898s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001442s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001634s ]
+
+[ 2017-01-03T18:35:05+08:00 ] 127.0.0.1 /hospital/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000801s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004862s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000326s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000282s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000216s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001283s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000396s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000439s ]
+
+[ 2017-01-03T18:35:05+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000517s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:35:06+08:00 ] 127.0.0.1 /hospital/Public/Css/Wopop_files/jquery.ui.theme.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001353s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001568s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+ERR: 无法加载模块:Public
+
+[ 2017-01-03T18:40:42+08:00 ] 127.0.0.1 /hospital/Appoint/depttype.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001713s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001932s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+SQL: SHOW COLUMNS FROM `doctor` [ RunTime:0.035567s ]
+SQL: SELECT `doctor_id`,`doctor_name` FROM `doctor` WHERE ( `small_id` = 8 ) AND ( `dtype_id` = 1 )  [ RunTime:0.038955s ]
+
+[ 2017-01-03T18:40:45+08:00 ] 127.0.0.1 /hospital/Appoint?num=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001167s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001351s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+NOTIC: [8] Undefined index: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 10 行.
+NOTIC: [8] Undefined variable: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 41 行.
+NOTIC: [8] Undefined variable: doctor_id D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 46 行.
+SQL: SHOW COLUMNS FROM `workdays` [ RunTime:0.009978s ]
+SQL: SELECT `work_one`,`work_two`,`work_three` FROM `workdays` WHERE ( `doctor_id` = null )  [ RunTime:0.000605s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 169 行.
+SQL: SHOW COLUMNS FROM `dept_small` [ RunTime:0.009359s ]
+SQL: SELECT `small_id`,`small_name` FROM `dept_small`  [ RunTime:0.000567s ]
+NOTIC: [8] Undefined index: kid D:\phpStudy\WWW\hospital\App\Lib\Action\AppointAction.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `doctor` [ RunTime:0.008383s ]
+SQL: SELECT `doctor_id`,`doctor_name` FROM `doctor` WHERE ( `small_id` = null ) AND ( `dtype_id` = 1 )  [ RunTime:0.000688s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\992afaf8035725e7101385ec15617b8b.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.050473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050620s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001023s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000846s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000913s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004177s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001288s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001441s ]
+
+[ 2017-01-03T18:40:48+08:00 ] 127.0.0.1 /hospital/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000929s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: select d.doctor_name,d.doctor_pic,d.doctor_detail,t.dtype_name,s.small_name
+		from doctor d,dept_small s,doct_type t 
+		where d.dtype_id=t.dtype_id and d.small_id=s.small_id
+		order by t.dtype_id desc
+		limit 4 [ RunTime:0.000895s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 100 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025198s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000927s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000777s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000813s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004242s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001520s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001668s ]
+
+[ 2017-01-03T18:40:51+08:00 ] 127.0.0.1 /hospital/Dept/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `dept_big` [ RunTime:0.007827s ]
+SQL: SELECT `big_name` FROM `dept_big`  [ RunTime:0.000341s ]
+SQL: select b.big_name,s.small_name from dept_big b,dept_small s 
+            where b.big_id=s.big_id [ RunTime:0.000558s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\87ad30c095ab06fa2f39f3071869185c.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015452s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000806s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000749s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000571s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000752s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003202s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001010s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2017-01-03T18:40:55+08:00 ] 127.0.0.1 /hospital/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000608s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: select d.doctor_name,d.doctor_pic,d.doctor_detail,t.dtype_name,s.small_name
+		from doctor d,dept_small s,doct_type t 
+		where d.dtype_id=t.dtype_id and d.small_id=s.small_id
+		order by t.dtype_id desc
+		limit 4 [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 100 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026704s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001526s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001155s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001574s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007336s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002216s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002833s ]
+
+[ 2017-01-03T18:41:02+08:00 ] 127.0.0.1 /hospital/Dept/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000586s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `dept_big` [ RunTime:0.006927s ]
+SQL: SELECT `big_name` FROM `dept_big`  [ RunTime:0.000566s ]
+SQL: select b.big_name,s.small_name from dept_big b,dept_small s 
+            where b.big_id=s.big_id [ RunTime:0.000675s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\87ad30c095ab06fa2f39f3071869185c.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015815s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000518s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000428s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000283s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001858s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000816s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2017-01-03T18:41:12+08:00 ] 127.0.0.1 /hospital/Index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000582s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: select d.doctor_name,d.doctor_pic,d.doctor_detail,t.dtype_name,s.small_name
+		from doctor d,dept_small s,doct_type t 
+		where d.dtype_id=t.dtype_id and d.small_id=s.small_id
+		order by t.dtype_id desc
+		limit 4 [ RunTime:0.000876s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\f331a3f0d874c4248458495ef2c2c2d1.php 第 100 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022008s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001161s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001025s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000777s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004719s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001157s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001303s ]
+
+[ 2017-01-03T18:41:18+08:00 ] 127.0.0.1 /hospital/Dept/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `dept_big` [ RunTime:0.011028s ]
+SQL: SELECT `big_name` FROM `dept_big`  [ RunTime:0.000771s ]
+SQL: select b.big_name,s.small_name from dept_big b,dept_small s 
+            where b.big_id=s.big_id [ RunTime:0.001235s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: username D:\phpStudy\WWW\hospital\App\Runtime\Cache\87ad30c095ab06fa2f39f3071869185c.php 第 102 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015216s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000889s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001076s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000666s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004013s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001163s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001303s ]
+

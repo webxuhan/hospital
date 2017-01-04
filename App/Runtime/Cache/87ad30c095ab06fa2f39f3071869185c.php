@@ -64,7 +64,7 @@ ddsmoothmenu.init({
             case 'Contact':
                 $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
                 break;
-            case 'Contact':
+            case 'Login':
                 $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
                 break;
             case 'Register':
@@ -136,7 +136,7 @@ ddsmoothmenu.init({
 			                	<th colspan="4"><?php echo ($k); ?></th>
 			                </tr>
 			                <tr>
-				                <?php $__FOR_START_11163__=1;$__FOR_END_11163__=count($v);for($i=$__FOR_START_11163__;$i < $__FOR_END_11163__;$i+=1){ ?><td><a href="__APP__/Dept/dept_detail/dp_name/<?php echo ($v[$i-1]); ?>"><?php echo ($v[$i-1]); ?></a></td>
+				                <?php $__FOR_START_25880__=1;$__FOR_END_25880__=count($v);for($i=$__FOR_START_25880__;$i < $__FOR_END_25880__;$i+=1){ ?><td><a href="__APP__/Dept/dept_detail/dp_name/<?php echo ($v[$i-1]); ?>"><?php echo ($v[$i-1]); ?></a></td>
 					            	<?php if($i%4 == 0): ?></tr><?php endif; } ?>
 			            </table><?php endforeach; endif; ?>  
 		        </div>

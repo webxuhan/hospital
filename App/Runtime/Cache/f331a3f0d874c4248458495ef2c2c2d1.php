@@ -64,7 +64,7 @@ ddsmoothmenu.init({
             case 'Contact':
                 $(".ddsmoothmenu>ul>li").eq(4).children("a").addClass("selected")
                 break;
-            case 'Contact':
+            case 'Login':
                 $(".ddsmoothmenu>ul>li").eq(5).children("a").addClass("selected")
                 break;
             case 'Register':
